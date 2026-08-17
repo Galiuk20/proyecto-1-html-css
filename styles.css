@@ -337,7 +337,11 @@ nav ul a:hover {
     display: grid;
 
     transition: transform 0.65s ease;
+
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+
+    will-change: transform;
 }
 
 
@@ -345,6 +349,7 @@ nav ul a:hover {
 
 .flip-toggle:checked + .entity-card .entity-card-inner {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 
@@ -372,6 +377,9 @@ nav ul a:hover {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+
     transition: border-color 0.2s ease;
 }
 
@@ -387,6 +395,9 @@ nav ul a:hover {
 .card-front {
     display: flex;
     flex-direction: column;
+
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
 }
 
 
@@ -572,6 +583,7 @@ nav ul a:hover {
     flex-direction: column;
 
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 
     background-color: #111615;
 }
